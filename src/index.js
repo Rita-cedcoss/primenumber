@@ -25,21 +25,23 @@ const arr=[];
     }
  }
 primeNumber();
-
 reportWebVitals();
 // sorting array program 
-
- const citesArr=["Lucknow" ,"kanpur" ,"Jaipur","Delhi","Mumbai"];
+ const citesArr=["Lucknow" ,"Kanpur" ,"Jaipur","Delhi","Mumbai","Barelly","Bundelkhand"];
   var arrData=citesArr.sort();
-  console.log(arrData);
-  
+  console.log(arrData); 
   root.render(
-    <div>{arr.map(item=>
+    <div><p>For prime number</p>{arr.map(item=>
     <p>{item}</p>  
     )}
+    <p>sorting Array</p>
     {arrData.map(cityitem=><li>{cityitem}</li>)}
-    
-    </div>
-    
-    
+    <p>start With B element</p>
+   <p>{citesArr.filter(belementFind).map(items=><li>{items}</li>)}</p>
+
+    </div>  
  );
+//find B element
+function belementFind(strB) {
+  return strB.startsWith("B");
+}
