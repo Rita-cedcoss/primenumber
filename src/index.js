@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
+//prime number program
 const arr=[];
  const primeNumber=()=>
  {
@@ -25,9 +25,21 @@ const arr=[];
     }
  }
 primeNumber();
-root.render(
-   <div>{arr.map(item=>
-   <p>{item}</p>  
-   )}</div>
-);
+
 reportWebVitals();
+// sorting array program 
+
+ const citesArr=["Lucknow" ,"kanpur" ,"Jaipur","Delhi","Mumbai"];
+  var arrData=citesArr.sort();
+  console.log(arrData);
+  
+  root.render(
+    <div>{arr.map(item=>
+    <p>{item}</p>  
+    )}
+    {arrData.map(cityitem=><li>{cityitem}</li>)}
+    
+    </div>
+    
+    
+ );
